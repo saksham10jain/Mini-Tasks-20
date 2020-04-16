@@ -1,0 +1,118 @@
+body
+{background: #667db6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-family: 'Gotu', sans-serif;
+
+}
+
+
+#container
+{
+	width: 800px;
+	
+	background-color: #c4c4c4;
+	margin:0 auto;
+}
+h1
+{
+	text-align: center;
+	font-family: 'Marck Script', cursive;
+}
+.rest
+{
+	padding-left: 4px;
+	background-color: #c4c4c4;
+	border-bottom: 2px solid black;
+}
+.brand
+{
+	color: #0a46a1;
+	padding: 2px;
+	font-weight: 700;
+}
+.brand:hover
+{
+	color: black;
+}
+
+.stars
+{
+	float: right;
+	padding: 3px;
+	vertical-align: top;
+	top: 50px;
+
+}
+.topten
+{
+	color: steelblue;
+}
+.tags
+{
+	color:#0a46a1 ;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+   background-color: black;
+    position: -webkit-sticky; /* Safari */
+  position: sticky
+}
+li {
+  display: inline;
+  padding: 2px;
+}
+input
+{
+	font-size: 15px;
+	background-color: white;
+	width:20%;
+	padding: 13px 13px 14px 18px
+	box-sizing: border-box;
+	color:steelblue;
+
+
+}
+input:focus
+{
+	background-color: white;
+	border:3px solid steelblue;
+	outline:none;
+}
+
+.dropbtn {
+  background-color: black;
+  color: lightsteelblue;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+
+}
+.dropbtn:hover
+{
+	background-color: steelblue;
+	color: black;
+}
+
+.fa-home
+{
+	color: white;
+	size:5px;
+}
+.fa-home:hover
+{
+	background-color: steelblue;
+	color: black;
+}
+.fa-star
+{
+	color: gold;
+}
+.active
+{
+	display: none;
+}
