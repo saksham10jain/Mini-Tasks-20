@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ramen Website</title>
+	<link rel="stylesheet" type="text/css" href="ramen.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+	
+</head>
+<body>
+ <h1>World of top Ramen</h1>
+
+ 	<div id="container">
+ 		<ul>
+ 			<li><span id="home"> <i class="fas fa-home fa-lg"></i> </span></li>
+ 			<li><input type="text" name="search" placeholder="search by name"></li>
+ 			<li> <select id="sort" placeholder='sort by' onchange="sort()" class="dropbtn"> 
+ 		 	<option value="none" selected disabled hidden> 
+          Sort By: 
+      		</option>
+ 		 	<option class="dropdown-content">Brand</option>
+ 		 	<option class="dropdown-content">Stars</option>
+ 			<option class="dropdown-content">Country</option>
+ 		</select></li>
+ 		<li>
+ 			<select id="country" onchange="countr()" class="dropbtn" >
+ 			<option value="none" selected disabled hidden> Search by country</option>
+ 			<option>All</option>
+ 			<option>Japan</option>
+ 			<option>Hong Kong</option>
+ 			<option>Singapore</option>
+ 			<option>Myanmar</option>
+ 			<option>Taiwan</option>
+ 			<option>Malaysia</option>
+ 			<option>China</option>
+ 			<option>South Korea</option>
+ 			<option>Indonesia</option>
+ 			<option>USA</option>
+ 		</select>
+ 		</li>
+ 		<li>
+ 			</select>
+ 		<select id="topten" onchange="topten()" class="dropbtn">
+ 		<option value="none" selected disabled hidden> top 10 appearance by year</option>
+ 		<option>2016</option>
+ 		<option>2015</option>
+ 		<option>2014</option>
+ 		<option>2013</option>
+ 		<option>2012</option>
+ 		</select>
+ 		</li>
+ 		</ul>
+ 		
+ 		<!-- <span id="home"> <i class="fas fa-home"></i> </span>
+ 		<input type="text" name="search" placeholder="search by name">
+ 		 <select id="sort" placeholder='sort by' onchange="sort()" class="dropbtn"> 
+ 		 	<option value="none" selected disabled hidden> 
+          Sort By: 
+      		</option>
+ 		 	<option class="dropdown-content">Brand</option>
+ 		 	<option class="dropdown-content">Stars</option>
+ 			<option class="dropdown-content">Country</option>
+ 		</select>
+ 		
+ 		<select id="country" onchange="countr()" class="dropbtn" >
+ 			<option value="none" selected disabled hidden> Search by country</option>
+ 			<option>All</option>
+ 			<option>Japan</option>
+ 			<option>Hong Kong</option>
+ 			<option>Singapore</option>
+ 			<option>Myanmar</option>
+ 			<option>Taiwan</option>
+ 			<option>Malaysia</option>
+ 			<option>China</option>
+ 			<option>South Korea</option>
+ 			<option>Indonesia</option>
+ 			<option>USA</option>
+ 		</select>
+ 		<select id="topten" onchange="topten()" class="dropbtn">
+ 		<option value="none" selected disabled hidden> top 10 appearance by year:</option>
+ 		<option>2016</option>
+ 		<option>2015</option>
+ 		<option>2014</option>
+ 		<option>2013</option>
+ 		<option>2012</option>
+ 		</select>
+
+ 		 -->
+
+ 	</div>
+
+<script type="text/javascript" src="ramen.js"></script>
+</body>
+</html>
