@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="Weather_Mate">WEATHER MATE</string>
+    <string name="Button_name">Get Current Weather Data</string>
+</resources>
