@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Top Ramen</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  top: 70px;
+left: -1px;
+width: page-width;
+height: 2715px;
+transform: matrix(1, 0, 0, 1, 0, 0);
+background: transparent linear-gradient(to right, #00CED1, #38464B);
+opacity: 1;
+}
+
+h1{text-align: center;
+font: Regular 45px/54px Agency FB;
+letter-spacing: 0px;
+color: white;
+opacity: 1;}
+
+
+.navbar {
+position:relative;
+top: 0px;
+left: 0px;
+width: page-width;
+height: 70px;
+background: #333 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.navbar a {
+  float: right;
+  display:block;
+  font-size: 22px;
+  letter-spacing: normal;
+  color: white;
+  text-align: center;
+  padding: 25px 30px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/*footer*/
+.lower {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background: black;
+}
+
+div.logo{
+position: absolute;
+top: 5px;
+left: 182px;
+background: transparent 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+h1{
+position: absolute;
+top: -5px;
+left: 300px;
+width: 67px;
+height: 50px;
+text-align: left;
+font: Regular 35px/50px Lemon/Milk;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+}
+
+input[name="subject"]{
+position: relative;
+top:100px;
+left:270px;
+width: 60%;
+padding: 12px 20px;
+margin: 8px 0;
+font-size: 22px;
+box-sizing: border-box;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+opacity: 1;}
+
+form.fill button {
+  position: relative;
+  top:120px;
+  left:270px;
+  width: 8%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 20px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+.list{
+  font-size: 30px;
+  position: relative;
+  top:140px;
+  left:270px;
+}
+
+.sort{
+  font-size: 25px;
+  position: relative;
+  top:75px;
+  left:800px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  background: white;
+}
+
+.row {margin: 0 -5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.fa-instagram {
+  size:20px;
+  background: black;
+  color: white;
+}
+
+.fa-twitter {
+  background: black;
+  color: white;
+}
+
+.fa-facebook-official {
+  background: black;
+  color: white;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="logo">
+    <img src="logoo.png" style="width:60px;">
+  </div>
+
+  <h1>頂級</h1>
+  <a href="#">Logout</a>
+  <a href="#">Contact Us</a>
+  <a href="#">Menu</a>
+</div>
+
+<div class="pic">
+  <img src="ramen.jpg" width="1200px" height="600" align="center" style="margin-left:6.5em">
+</div>
+
+<h1
+style="top: 123px;
+left: 600px;
+width: 20px;
+height: 510px;
+font-size:40px;
+text-align:center;
+font: Regular 45px/54px Agency FB;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;"><em>Top Ramen</em></h1>
+
+
+<form class="fill">
+      <input type="text" name="subject" placeholder="Search any restaurant or dish.."required/><br>
+      <button type="submit">Submit</i></button>
+</form>
+
+<button onclick="sortListDir()" class="sort">Sort alphabetically</button>
+
+<ul id="id01" class="list">
+  <li>Mama Instant Noodles Coconut flavour</li>
+  <li>Singapore Laksa Wholegrain</li>
+  <li>Prima Juzz's Mee Creamy Chicken</li>
+  <li>Tseng Scallion with Sichuan Pepper</li>
+  <li>Wugudaochang Tomato Beef Potato Noddle</li>
+  <li>CarJen Nyonya Curry Laksa</li>
+</ul>
+
+<script>
+function sortListDir() {
+  var list, i, switching, b, shouldSwitch, dir, switchcount = 0;
+  list = document.getElementById("id01");
+  switching = true;
+  // Setting the sorting direction to ascending:
+  dir = "asc";
+  // loop that will continue until no switching has been done:
+  while (switching) {
+    // At start, no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    // Looping through all list-items:
+    for (i = 0; i < (b.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /* checking if the next item should switch place with the current item,
+      based on the sorting direction (asc or desc): */
+      if (dir == "asc") {
+        if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (b[i].innerHTML.toLowerCase() < b[i + 1].innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+      switchcount ++;
+    } else {
+      /* If no switching has been done and the direction is "asc",
+      setting the direction to "desc" and running the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+
+<h2 style="font-family:verdana; font-size: 35px;"><em>Our wide range of Varieties..</em></h2>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <h3 style="font-size: 22px; text-align:center">Mama</h3>
+      <img src="1.jpg" style="width:300px;height:300px;">
+      <p>Instant noodles Coconut Milk flavour</p>
+      <p style="font-size: 30px; text-align:center">Myanmar</p>
+      <p style="font-size: 40px ; text-align:center">* * * * *</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <h3 style="font-size: 22px; text-align:center">Prima Taste</h3>
+      <img src="laksa.jpg" style="width:250px; height:300px;">
+      <p>Singapore Laksa Wholegrain La Mian</p>
+      <p style="font-size: 30px; text-align:center">Singapore</p>
+      <p style="font-size: 40px ; text-align:center">* * * *</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <h3 style="font-size: 22px; text-align:center">Prima</h3>
+      <img src="juzz.jpg" style="width:250px; height:300px;">
+      <p>Juzz's Mee Creamy Chicken Flavour</p>
+      <p style="font-size: 30px; text-align:center">Singapore</p>
+      <p style="font-size: 40px ; text-align:center">* * *</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <h3 style="font-size: 22px; text-align:center">Tseng Noodles</h3>
+      <img src="tseng.jpg" style="width:300px; height:300px;">
+      <p>Scallion With Sichuan Pepper  Flavor</p>
+      <p style="font-size: 30px; text-align:center">Taiwan</p>
+      <p style="font-size: 40px ; text-align:center">* * * * *</p>
+    </div>
+  </div>
+</div>
+
+
+<footer class="lower">
+  <a href="#"><i class="fa fa-facebook-official" ></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-instagram"></i></a>
+
+  <h3>Connect to us on Social media</h3>
+</footer>
+
+</body>
+</html>
