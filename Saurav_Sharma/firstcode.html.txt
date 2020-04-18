@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaraunt's at your tip</title>
+	<link rel="stylesheet" href="firstcodee.css">
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+	<h4>Know all you want to know<br> about ramen restaurant's around the world!</h4>
+	<img src="https://d37219swed47g7.cloudfront.net/media/images/guides/dark-chicago-restaurant-power-rankings/Gejas_sandynoto_1.jpg">
+	<form>
+		<p>Please enter the following details</p>
+		<div>
+		<label for="count">Select the country name</label>
+			<select name="country" required>
+				<option>Country</option>
+				<option>India</option>
+				<option>United States of America</option>
+				<option>Italy</option>
+				<option>Germany</option>
+				<option>China</option>
+				<option>Japan</option>
+				<option>Singapore</option>
+				<option>United Arab Emirates</option>
+				<option>Spain</option>
+				<option>Thailand</option>
+				<option>France</option>
+				<option>United Kingdom</option>
+				<option>Sri Lanks</option>
+				<option>Russia</option>
+			</select>
+		</div>
+			<button>Go!</button>
+		</form>
+	</body>
+	</html>

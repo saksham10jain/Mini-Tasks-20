@@ -1,0 +1,22 @@
+body{
+	background-color:#000000;
+	margin:0 auto;
+}
+h4{
+	text-align:center;
+	font-family:Satisfy;
+	color:#FFFFFF;
+	font-size: 40px;
+}
+img{
+	margin-left:40%;
+	width:300px;
+}
+label{
+	color:white;
+	margin-left:40%;
+}
+button{
+	margin-left:50%;
+	margin-top:20px;
+}
